@@ -44,7 +44,6 @@ if ($is_playing) {
         print "Nothing to do.\n";
     } else {
         print "Should stop playback.\n";
-        system("killall mpg123");
     }
 } else {
     print "Not currently playing. ";
