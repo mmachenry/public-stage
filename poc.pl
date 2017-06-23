@@ -42,6 +42,7 @@ if ($is_playing) {
     print "Currently playing. ";
     if ($should_play) {
         print "Nothing to do.\n";
+        system("amixer set Master 50%");
     } else {
         print "Should stop playback.\n";
     }
