@@ -1,5 +1,4 @@
 #!/usr/bin/env perl
-
 use strict;
 use warnings;
 use POSIX qw(strftime);
@@ -42,6 +41,7 @@ if ($is_playing) {
     print "Currently playing. ";
     if ($should_play) {
         print "Nothing to do.\n";
+        system("amixer set Master 180%");
     } else {
         print "Should stop playback.\n";
     }
