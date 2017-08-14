@@ -35,7 +35,7 @@ def check_and_play_song(client, song_url):
 if __name__ == "__main__":
   scheduled_song_url = get_current_schedule_song()
   client = mpd.MPDClient()
-  client.connect("192.168.0.108",6600)
+  client.connect(host, port)
   if scheduled_song_url:
     check_and_play_song(client, scheduled_song_url)
   else:
