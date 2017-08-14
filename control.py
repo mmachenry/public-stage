@@ -7,12 +7,13 @@ import time
 host = "localhost"
 port = 6600
 datetime_format = '%Y-%m-%dT%H:%M:%S'
+schedule_file = '/home/pi/public-stage/schedule.csv'
 
 # Returns the file of the first line of the CSV with timestamps
 # that flank the current time.
 def get_current_schedule_song():
   now = time.localtime()
-  with open('schedule.csv', 'rb') as csv_file:
+  with open(schedule_file, 'rb') as csv_file:
     row_reader = csv.reader(csv_file, delimiter=',', quotechar='"')
     for row in row_reader:
       start_time = time.strptime(row[0], datetime_format)
