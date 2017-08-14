@@ -4,7 +4,7 @@ import mpd
 import csv
 import time
 
-host = "192.168.0.108"
+host = "localhost"
 port = 6600
 datetime_format = '%Y-%m-%dT%H:%M:%S'
 
