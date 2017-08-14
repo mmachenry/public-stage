@@ -27,6 +27,8 @@ def check_and_play_song(client, song_url):
   if song['file'] != song_url:
     client.clear()
     client.add(song_url)
+  status = client.status()
+  if status['state'] != 'play':
     client.play()
 
 if __name__ == "__main__":
