@@ -25,7 +25,7 @@ def get_current_schedule_song():
 # it to be playing.
 def check_and_play_song(client, song_url):
   song = client.currentsong()
-  if song['file'] != song_url:
+  if not 'file' in song or song['file'] != song_url:
     client.clear()
     client.add(song_url)
   status = client.status()
